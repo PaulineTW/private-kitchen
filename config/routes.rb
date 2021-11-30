@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       resources :bookings, only: %i[new create]
     end
 
-    # resources :users
+    resources :users
+
+    resources :kitchens, only: :destroy
 
 end
