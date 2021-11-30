@@ -1,4 +1,5 @@
 class KitchensController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index, :show]
 
 
   def index
@@ -20,8 +21,9 @@ class KitchensController < ApplicationController
 
  def create
   @kitchen = Kitchen.new(kitchen_params)
-
-  if @ktichen.save
+  @kitchen.user = current_user
+  if @kitchen.valid?
+    @kitchen.save
     redirect_to kitchen_path(@kitchen)
   else
   render :new
@@ -35,10 +37,6 @@ class KitchensController < ApplicationController
 
  def kitchen_params
   params.require(:kitchen).permit(:title, :cuisine, :description, :price)
-
  end
-
-
-
 
 end
