@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :users
-  belongs_to :kitchens
+  belongs_to :user
+  belongs_to :kitchen
   validates :date, presence: true
 end
