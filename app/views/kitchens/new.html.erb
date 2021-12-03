@@ -8,6 +8,7 @@
           <%= f.input :cuisine, placeholder: 'Enter your cuisine' %>
           <%= f.input :description, placeholder: 'Enter a description' %>
           <%= f.input :price, placeholder: 'Enter the price' %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
