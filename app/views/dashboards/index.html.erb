@@ -1,0 +1,19 @@
+<div class="dashboard_banner">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('dashboard_banner.png') %>)">
+    <h1>My Dashboard</h1>
+  </div>
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">My bookings</a>
+    <%= render 'my_bookings' %>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">My Kitchens</a>
+    <div class= "list">
+      <%= render 'my_kitchens' %>
+    </div>
+  </li>
+</ul>
