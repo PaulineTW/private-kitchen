@@ -1,1 +1,17 @@
-<h1>Hello this is to show individual kitchen </h1>
+
+<%# <h1>Hello this is to show individual kitchen </h1> %>
+
+  <h2 class="text-center dancing-font padding-above-navbar"><%= @kitchen.title %> </h2>
+
+
+<small> <%= link_to 'All private kitchen experiences', kitchens_path %> </small>
+
+
+<div>
+<h3> Your experience</h3>
+<p><%= @kitchen.description %> </p>
+</div>
+
+
+
+<%= link_to 'Add a booking',  new_kitchen_booking_path(@kitchen) %>

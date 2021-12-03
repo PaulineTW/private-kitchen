@@ -1,67 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-# Kitchen.create!(
-#   title: 'Roll pasta with an Italian grandma',
-#   cuisine: 'Italian',
-#   description: 'Cook with one of the best chefs ever: Our grandma, Nonna Nerina! She and her sisters will show you how to prepare the perfect handmade pasta—no machines, just your hands, the freshest local ingredients, and love.',
-#   price: 75,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'Make mole with an Indigenous cook',
-#   cuisine: 'Mexican',
-#   description: 'We will begin our journey with an introduction to what pre-hispanic life was like, around the times of the first interactions between the Mayans and the Aztecs. For example, a very important trait of all food at the time was the perfect aroma and flavor... it was believed that the Gods would not accept your offerings of foods to them if these two traits were not right',
-#   price: 95,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'Cook Indian with a former pro chef',
-#   cuisine: 'Indian',
-#   description: 'One of the coolest things about this class, is that I cook a different menu every week. There are plenty of vegetarian and non-vegetarian options, & once you book, Ill get in touch to figure out preferences etc.',
-#   price: 100,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'Savor sushi and sake with an artist',
-#   cuisine: 'Japan',
-#   description: 'Its unique cultural cooking class for everyone! Youll learn how to make Sushi at home, and at the same time, get in touch with traditional Japanese culture in a friendly manner.',
-#   price: 75,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'Churros masterclass with chef',
-#   cuisine: 'Spanish',
-#   description: 'We are very passionate about churros and chocolate, especially the Mexican kind. You may not know this but chocolate was invented in Mexico by an indigenous group and then exported to the world',
-#   price: 95,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'A Traditional Oyster Grilling Experience',
-#   cuisine: 'American',
-#   description: 'We will be participate in cleaning, shuching, and preparing oysters to make the perfect Chargilles Oyster',
-#   price: 120,
-#   user_id: 1,
-#   )
-
-# Kitchen.create!(
-#   title: 'Authentic And Unique French Experience',
-#   cuisine: 'French',
-#   description: 'The experience is about awakening your 5 senses, you will learn the few steps to make, shape and bake a baguette, make butter, saber Champagne and finally eat your masterpiece during a wonderful lunch together',
-#   price: 105,
-#   user_id: 1,
-#   )
 
 
 puts 'Cleaning users from the database...'
@@ -80,59 +16,62 @@ puts 'Creating private kitchen experiences ...'
 
 Kitchen.create!(
   title: "C'est Bon C'est Belge",
-  description: "Discover Belgian food in Brunswick",
+  description: "Discover Belgian food in Brunswick non non do cupidatat ad laborum ullamco fugiat do tempor aute culpa reprehenderit.
+  Magna quis magna proident commodo nisi aliqua amet pariatur reprehenderit. Ea proident mollit est sunt incididunt elit minim magna ut commodo consequat velit et et.
+  Sit commodo eu minim cupidatat irure sint ea voluptate consequat est.
+
+  Quis laboris do aute pariatur proident elit mollit eiusmod veniam qui ea voluptate est minim. Exercitation ullamco cupidatat minim cupidatat dolore eu. Voluptate nisi sint enim consectetur laborum fugiat ipsum. Ad culpa elit aute incididunt non ex labore aliqua aliqua cupidatat est.
+
+  Velit dolore aliqua excepteur veniam non in. Minim non quis ad et est incididunt velit velit cillum exercitation ut sit. Consectetur labore Lorem non mollit elit sit cillum non ea eiusmod voluptate Lorem. Eiusmod tempor ullamco eiusmod anim sit consequat id irure. Sunt ut commodo incididunt ad aliquip ipsum id id commodo consectetur nulla consectetur.
+
+  Deserunt proident sint cillum consectetur pariatur aute enim do irure sunt enim labore. Ad aute ullamco est elit eiusmod ullamco duis dolor non dolor Lorem est laboris. Esse non commodo officia incididunt. Exercitation aliqua ex culpa ut eu ea mollit aute exercitation. Cupidatat anim dolor ipsum laboris ex cupidatat qui esse ea sunt. Sint labore pariatur nisi non anim ipsum aliquip id ea elit aliqua esse excepteur anim.",
+
   cuisine: "belgian",
   price: 50,
   user_id: user2.id
 )
 Kitchen.create!(
   title: "Epicure",
-  description: "Finest French in Footscray",
+  description: "Finest French in Footscray Cupidatat id ex aliquip officia irure. Cupidatat proident culpa deserunt cillum minim eiusmod adipisicing et qui amet tempor. Consequat elit dolor aliquip sit commodo irure tempor excepteur. Voluptate adipisicing magna consequat fugiat.
+
+Culpa proident dolore ullamco excepteur ut amet commodo magna laboris eiusmod exercitation nostrud veniam. Tempor cillum ullamco reprehenderit et proident voluptate ut ut. Consequat nisi id ex dolore nostrud incididunt incididunt cupidatat ad. Dolore reprehenderit nostrud sit culpa aliqua reprehenderit eu sunt aliquip dolor esse excepteur. Consequat laborum amet voluptate adipisicing aliqua occaecat. Nulla consequat nostrud veniam eiusmod sint est proident aliquip exercitation.
+
+Dolor nisi magna consequat Lorem amet. Deserunt aliqua occaecat sint pariatur laboris minim sint tempor ad ullamco labore proident. Quis velit mollit aliquip nulla nisi qui anim ut nisi consequat mollit et.",
   cuisine: "french",
   price: 100,
   user_id: user1.id
 )
 Kitchen.create!(
   title: "Ristorante A Mano",
-  description: "Mamma mia!",
+  description: "Mamma mia! Adipisicing pariatur fugiat occaecat in ut fugiat. Duis minim id reprehenderit culpa Lorem consectetur. Id ipsum ullamco velit esse in. Culpa fugiat est officia ipsum. Tempor culpa ipsum nisi proident minim nostrud id quis quis incididunt cupidatat. Exercitation nostrud anim mollit nisi eiusmod sit. Dolor irure adipisicing cupidatat laborum laboris enim magna eu est labore nulla aute.
+
+Duis nostrud ipsum deserunt aliqua excepteur laboris enim. Deserunt proident mollit officia cillum sunt. Reprehenderit nulla ullamco cillum occaecat nulla ex veniam.
+
+Excepteur nostrud nulla commodo magna tempor. Cupidatat non adipisicing culpa deserunt sint sunt eu proident mollit aute pariatur. Culpa do et officia sit consequat proident laborum mollit irure ipsum. Occaecat ad irure id anim cillum labore ut aliquip pariatur. Cillum est anim mollit proident cupidatat ipsum. Sint laboris dolore quis dolor.",
   cuisine: "italian",
   price: 80,
   user_id: admin.id
 )
 Kitchen.create!(
   title: "Teppanyaki Kitchen Sazanka",
-  description: "Elegant food in your home",
+  description: "Elegant food in your home Officia aute occaecat in deserunt quis est qui voluptate aliqua. Commodo culpa irure excepteur quis id voluptate. Dolore excepteur enim aliquip enim elit aliqua. Sit duis velit enim adipisicing qui amet excepteur cupidatat. Occaecat do anim nisi velit sunt aute labore est officia. Occaecat Lorem anim culpa tempor non nulla excepteur labore. In ad labore proident ex minim eu irure minim qui. Eiusmod proident nisi dolore est veniam velit laborum irure veniam nisi id deserunt tempor. Pariatur nulla id duis velit amet.
+
+Velit incididunt quis ut ex magna esse ut laborum adipisicing in anim officia. Velit reprehenderit in deserunt officia enim nostrud pariatur aliquip. Ipsum cupidatat cillum labore elit aute tempor irure sit. Nostrud nisi eiusmod incididunt non amet labore consequat Lorem minim qui officia nulla. Consectetur nostrud voluptate quis aliqua do. Consequat nisi sint eiusmod quis proident laborum fugiat fugiat exercitation ea ad veniam pariatur.
+
+Tempor et nulla ullamco ullamco duis elit elit dolor aliqua ipsum ut. Nisi et aute do officia nulla. Ipsum ullamco veniam pariatur irure.",
   cuisine: "japanese",
   price: 90,
   user_id: admin.id
 )
 Kitchen.create!(
   title: "Sichuan Folk",
-  description: "Spicy goodness",
+  description: "Spicy goodness Deserunt occaecat adipisicing velit laborum voluptate enim magna non ex quis ad eiusmod culpa deserunt. Elit reprehenderit consequat ex proident reprehenderit reprehenderit exercitation nulla officia. Consectetur tempor sunt irure ex consectetur fugiat cupidatat do veniam sunt qui. Minim Lorem occaecat aliqua ut cillum sit.
+
+Cupidatat ea sunt consectetur laborum est esse ipsum id aliquip voluptate incididunt dolore velit. Ea ipsum sunt irure ut non exercitation incididunt nulla sit. Nostrud cupidatat sint ad qui. Culpa officia veniam non enim laborum sit pariatur ea id ea velit.",
   cuisine: "chinese",
   price: 85,
   user_id: user1.id
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   puts 'Finished!'
