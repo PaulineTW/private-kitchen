@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
-
-  before_action :find_kitchen, only: [:create, :new]
+  before_action :find_kitchen, only: %i[create new]
   def index
     @bookings = Booking.all
   end
@@ -11,10 +10,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-     @booking.user = current_user
-     @booking.kitchen = @kitchen
+    @booking.user = current_user
+    @booking.kitchen = @kitchen
     if @booking.valid?
-       @booking.save
+      @booking.save
       redirect_to kitchen_bookings_path(@booking)
     else
       render :new
@@ -26,6 +25,8 @@ class BookingsController < ApplicationController
     redirect_to kitchens_path
   end
 
+  def show
+  end
 
   private
 
@@ -33,11 +34,7 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:date)
   end
 
-
-   def find_kitchen
+  def find_kitchen
     @kitchen = Kitchen.find(params[:kitchen_id])
   end
-
-
-
 end
