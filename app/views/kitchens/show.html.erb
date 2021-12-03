@@ -1,23 +1,51 @@
 
 
 
+  <div class="map" style="background-image: url('<%= asset_path('privatekitchen_background.png') %>')"></div>
+
+    <div class="d-flex flex-row  container margin-top-negative">
+      <div class=" row first-container">
+        <div class="col-10 p-2">
+          <div class="flat-show-card">
+            <h1><%= @kitchen.title %></h1>
+          </div>
+        </div>
+          <div class="flat-show-card col-10 p-2">
+            <h3>A bit more about this experience...</h3>
+            <p ><%= @kitchen.description %></p>
+          </div>
+      </div>
 
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('privatekitchen_background.png') %>)">
- <h3><%= @kitchen.title %></h3>
- </div>
+
+      <div class="row second-container col-4 p-2 ">
+        <div class="col-12 p-2 ">
+          <div class="flat-show-card">
+            <h5>Book this private kitchen!</h5>
+            <form action="">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Date:</span>
+                <input type="text" class="form-control" placeholder="03/12/2021" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <input type="submit" value="Book" class="btn btn-outline-secondary text-decoration-none  mt-2" style="width: 100%">
+              <%# <%= link_to 'Book Kitchen', dashboards_path, :class => "btn btn-success mt-2" %>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12 p-2 ">
+          <div class="flat-show-card">
+              <h3 > Details</h3>
+            <div class="flex">
+              <div class="flex ml-3">
+                <i class="material-icons mr-2"><%= @kitchen.price %> AUD</i>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-<small><%= link_to 'View all Private Kitchen Experiences', kitchens_path %></small>
+      </div>
 
 
-<div class="row">
-<div class="col-sm-4 px-med-n4 ">
- <p><b>What you'll experience</b></p>
-  <p class = "mb-0" class="pointer"> <%= @kitchen.description %> </p>
-</div>
-
-</div>
-
-
-<%= link_to 'Add a booking',  new_kitchen_booking_path(@kitchen) %>
+  </div>
