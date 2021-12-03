@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 <%# <h1>Hello this is to show individual kitchen </h1> %>
 
   <h2 class="text-center dancing-font padding-above-navbar"><%= @kitchen.title %> </h2>
@@ -13,27 +12,6 @@
 <p><%= @kitchen.description %> </p>
 </div>
 
-=======
-
-
-
-
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('privatekitchen_background.png') %>)">
- <h3><%= @kitchen.title %></h3>
- </div>
-
-
-<small><%= link_to 'View all Private Kitchen Experiences', kitchens_path %></small>
-
-
-<div class="row">
-<div class="col-sm-4 px-med-n4 ">
- <p><b>What you'll experience</b></p>
-  <p class = "mb-0" class="pointer"> <%= @kitchen.description %> </p>
-</div>
-
-</div>
->>>>>>> 5d0386d828ce3343e96b4f630e97ad26b81b3ca0
 
 
 <%= link_to 'Add a booking',  new_kitchen_booking_path(@kitchen) %>
