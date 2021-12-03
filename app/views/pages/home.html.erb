@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# <h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p> %>
+
+
+  <div class = "background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('privatekitchen_background.png') %>)">
+    <div class = "container ">
+          <div class="d-flex flex-column justify-content-center">
+            <%= image_tag "privatekitchenwhite_logo.png", class:"logo_home"%>
+            <h2>Enter the fascinating world of private kitchen</h2>
+            <%= link_to 'Enter our Kitchen', kitchens_path, class: "btn btn-light" %>
+        </div>
+    </div>
+  </div>
