@@ -80,59 +80,56 @@ puts 'Creating private kitchen experiences ...'
 
 Kitchen.create!(
   title: "C'est Bon C'est Belge",
-  description: "Discover Belgian food in Brunswick",
+  description: "Discover Belgian food in Brunswick Labore magna excepteur cillum consequat sint veniam do cupidatat ullamco aute velit. Aute proident laboris proident et deserunt nulla veniam commodo laboris minim sunt pariatur. Nisi consectetur sunt ex anim ut enim deserunt do veniam veniam. Minim tempor cupidatat reprehenderit minim do dolor. Consequat do amet elit fugiat do. Lorem qui incididunt irure laboris nulla officia labore aliquip in.
+
+Magna officia aliquip consequat proident enim ipsum incididunt nisi cillum et duis. Occaecat duis incididunt cupidatat aliquip incididunt eu mollit occaecat et ea culpa. Ex labore cupidatat magna laboris pariatur commodo occaecat duis sint do reprehenderit elit. Nisi aliqua ut ullamco excepteur adipisicing mollit cillum elit incididunt. Enim deserunt nisi proident eiusmod pariatur quis voluptate aute commodo fugiat. Ad fugiat minim tempor nisi excepteur nisi do anim.
+
+Nisi cupidatat enim est officia commodo laboris consequat enim amet. Enim non pariatur duis veniam proident elit Lorem tempor eiusmod cupidatat ullamco culpa. Dolore minim elit irure culpa fugiat dolore deserunt id culpa commodo consectetur labore. Incididunt dolor fugiat non velit non adipisicing duis ipsum commodo.",
   cuisine: "belgian",
   price: 50,
   user_id: user2.id
 )
 Kitchen.create!(
   title: "Epicure",
-  description: "Finest French in Footscray",
+  description: "Finest French in Footscray Non esse nulla do id occaecat eiusmod excepteur est veniam Lorem laborum mollit enim. Quis sit ea eu ut nulla aute elit ex nulla commodo. Irure ipsum do nulla anim. Cillum tempor reprehenderit sunt do non laboris minim do. Amet officia officia labore ad et eiusmod incididunt dolor occaecat duis id. Esse dolor cupidatat Lorem ut ad officia velit est. Consequat tempor ipsum ea ullamco nostrud magna voluptate.
+
+Aliqua consectetur id aliquip elit ex eiusmod laborum mollit amet ut eu do incididunt incididunt. Est pariatur pariatur pariatur tempor pariatur in. Pariatur sit velit consectetur eu pariatur labore do occaecat cupidatat eu nostrud labore incididunt. Irure pariatur consequat enim quis labore ex anim veniam aliqua duis occaecat mollit esse cupidatat. Quis commodo qui id mollit aute dolor ad esse nulla adipisicing.
+
+Do tempor labore nostrud minim veniam laborum culpa eu aute veniam. Minim consectetur id amet in sit pariatur aute consectetur nisi quis in aute. Laboris aliquip duis excepteur deserunt consequat eiusmod dolor ea.",
   cuisine: "french",
   price: 100,
   user_id: user1.id
 )
 Kitchen.create!(
   title: "Ristorante A Mano",
-  description: "Mamma mia!",
+  description: "Mamma mia! Mollit elit id dolor enim mollit qui dolor. Anim nulla ea culpa labore commodo excepteur ut irure duis. Ad proident sint voluptate laboris commodo. Sint minim consequat proident eiusmod irure nisi eiusmod ullamco ullamco proident duis irure.
+
+Cupidatat culpa anim aliquip amet ipsum sint aliqua ea non veniam. Esse consequat pariatur reprehenderit velit enim culpa enim et sit. Cillum labore minim nisi non.
+
+Pariatur duis sunt elit et consequat aliqua consectetur quis non nisi commodo excepteur mollit. Eu tempor pariatur adipisicing aute Lorem ullamco cillum. Fugiat velit do reprehenderit labore magna aute ipsum ullamco. Cillum non labore occaecat id laborum proident tempor duis et sint minim fugiat aliquip exercitation. Culpa quis voluptate reprehenderit officia quis fugiat exercitation. Nostrud deserunt irure ut incididunt enim esse cupidatat ea nulla elit et. Aute proident aliqua ad eiusmod deserunt occaecat adipisicing nostrud adipisicing.",
   cuisine: "italian",
   price: 80,
   user_id: admin.id
 )
 Kitchen.create!(
   title: "Teppanyaki Kitchen Sazanka",
-  description: "Elegant food in your home",
+  description: "Elegant food in your home Ipsum cupidatat nulla commodo non Lorem commodo laboris occaecat consectetur non id sit adipisicing. Ut incididunt ut velit nostrud voluptate proident enim dolor tempor ad deserunt est in veniam. Eu commodo officia adipisicing et aute dolore mollit sint.
+
+Sunt amet consectetur minim et enim aliquip minim minim anim excepteur. Eiusmod est sint aliquip deserunt. Fugiat irure veniam qui enim cillum Lorem eu ad consectetur.",
   cuisine: "japanese",
   price: 90,
   user_id: admin.id
 )
 Kitchen.create!(
   title: "Sichuan Folk",
-  description: "Spicy goodness",
+  description: "Spicy goodness Sit tempor do tempor non ea tempor tempor eu sit. Laboris voluptate aliquip nulla id amet occaecat anim qui laborum velit dolore. Dolor proident do enim id reprehenderit sint duis deserunt dolore laboris officia eu. Ex excepteur est nulla commodo esse.
+
+Cupidatat cupidatat mollit anim irure amet velit dolore. Non consectetur aliquip amet mollit non dolore mollit et ex amet duis. Cillum commodo duis sint est laborum nulla eiusmod nisi commodo voluptate incididunt Lorem incididunt. Pariatur dolore eiusmod eu tempor eiusmod cupidatat laborum adipisicing minim occaecat occaecat aliqua amet cillum.
+
+Officia est id consectetur dolore sunt est enim do aute sunt. Exercitation ea tempor proident incididunt occaecat est est laborum irure enim eu. Incididunt duis anim non ex aliqua nisi fugiat ullamco Lorem et et ut.",
   cuisine: "chinese",
   price: 85,
   user_id: user1.id
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   puts 'Finished!'
