@@ -12,17 +12,17 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.kitchen = @kitchen
-    if @booking.valid?
-      @booking.save
-      redirect_to kitchen_bookings_path(@booking)
+    if @booking.save
+      redirect_to dashboards_path
     else
+
       render :new
     end
   end
 
   def destroy
     @booking.destroy
-    redirect_to kitchens_path
+    redirect_to dashboards_path
   end
 
   def show
