@@ -1,0 +1,35 @@
+<div class="dashboard_banner">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('dashboard_banner.png') %>)">
+    <h1>My Dashboard</h1>
+  </div>
+</div>
+
+<div class="tabs-container">
+  <ul class="tabs">
+    <li class="active">
+      <a href="">My Bookings</a>
+    </li>
+    <li>
+      <a href="">My Kitchens</a>
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" data-index="0">
+      <!-- content here -->
+      <div class= "container">
+        <% @bookings.each do |booking| %>
+          <div class= "card">
+            <% if booking.user_id == current_user.id %>
+              <%= booking.kitchen.title %>
+              <%= booking.date %>
+              <%= booking.kitchen.price %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+  </div>
+    <div class="tabs-panel" data-index="1">
+      <!-- content here -->
+    </div>
+  </div>
