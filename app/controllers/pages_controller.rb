@@ -7,4 +7,5 @@ class PagesController < ApplicationController
     @bookings = Booking.all
     @kitchens = Kitchen.all
   end
+
 end
