@@ -31,9 +31,30 @@
   <div class="tabs-content">
     <div class="tabs-panel active" data-index="0">
       <!-- content here -->
+      <div class= "container">
+ <div class= "card">
+    <% @kitchen.bookings.each do |booking| %>
+      <% booking = Booking.find_by(kitchen: @kitchen) %>
+      <div class="card m-3" style="width: 18rem;">
+        <%= image_tag "indian_food.jpg" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= kitchen.title%></h5>
+            <p class="card-text"><%= kitchen.cuisine%></p>
+            <p class="date"><%= booking.date%></p>
+            <p class="user_name"><%= user.last_name%></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+ </div>
+</div>
+
     </div>
     <div class="tabs-panel" data-index="1">
       <!-- content here -->
+      <h1>My bookings</h1>
     </div>
   </div>
 </div>
+
+<%= Booking.all %>

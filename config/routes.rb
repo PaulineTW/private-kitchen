@@ -5,5 +5,6 @@ Rails.application.routes.draw do
       resources :bookings, only: %i[new create index]
     end
     resources :users
-    resources :dashboards
+    get '/dashboards', to: 'pages#dashboards', as: :dashboard
+
 end
