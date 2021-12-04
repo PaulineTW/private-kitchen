@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.kitchen = @kitchen
     if @booking.save
-      redirect_to dashboards_path
+      redirect_to dashboard_path
     else
 
       render :new
@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to dashboards_path
+    redirect_to dashboard_path
   end
 
   def show
