@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_04_045615) do
+ActiveRecord::Schema.define(version: 2021_12_07_101227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,12 +39,13 @@ ActiveRecord::Schema.define(version: 2021_12_04_045615) do
   create_table "bookings", force: :cascade do |t|
     t.date "date"
     t.boolean "confirm"
-    t.bigint "user_id", null: false
-    t.bigint "kitchen_id", null: false
+    t.bigint "users_id", null: false
+    t.bigint "kitchens_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["kitchen_id"], name: "index_bookings_on_kitchen_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.integer "guests"
+    t.index ["kitchens_id"], name: "index_bookings_on_kitchens_id"
+    t.index ["users_id"], name: "index_bookings_on_users_id"
   end
 
   create_table "kitchens", force: :cascade do |t|
@@ -73,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_12_04_045615) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "kitchens"
-  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "kitchens", column: "kitchens_id"
+  add_foreign_key "bookings", "users", column: "users_id"
   add_foreign_key "kitchens", "users"
 end
