@@ -1,5 +1,4 @@
 
-
 puts 'Cleaning users from the database...'
 
 User.destroy_all

@@ -7,11 +7,11 @@
 <div class="tabs-container">
   <ul class="tabs">
     <li class="active">
-      <a href="">My Bookings</a>
+      <p>My Bookings</p>
     </li>
-    <li>
+    <%# <li>
       <a href="">My Kitchens</a>
-    </li>
+    </li> %>
   </ul>
   <div class="tabs-content">
     <div class="tabs-panel active" data-index="0">
@@ -28,7 +28,7 @@
                 <div class="more_options">
                   <%= link_to 'Change the date', new_kitchen_booking_path(@kitchens) %> |
                   <%= link_to 'Delete',
-                    dashboard_path,
+                    booking_path(booking),
                     method: :delete,
                     data: { confirm: "Are you sure you want to delete?" } %>
                 </div>
