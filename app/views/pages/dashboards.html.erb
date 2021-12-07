@@ -24,9 +24,11 @@
         <div class= "card flex m-4 p-3">
             <%= image_tag "booking_image.jpg", class: "avatar" %>
               <%= booking.kitchen.title %>
-              <i class="material-icons mr-2">Date :  <%= booking.date %></i>
+              <i class="material-icons mr-2">Name of booker: <%= booking.user.first_name %>
+              <%= booking.user.last_name %></i>
+              <i class="material-icons mr-2">Email of booker: <%= booking.user.email %></i>
               <i class="material-icons mr-2">User_id <%= booking.user_id %></i>
-              <i class="material-icons mr-2">Name of booker: <%= booking.user.first_name %></i>
+              <i class="material-icons mr-2">Date : <%= booking.date %></i>
 
                 <div class="more_options">
                   <%= link_to 'Change the date', new_kitchen_booking_path(@kitchens) %> |
