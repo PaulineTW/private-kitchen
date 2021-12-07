@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboards
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
     @kitchens = Kitchen.all
     @my_kitchens_bookings = current_user.kitchens.flat_map{|kitchen|kitchen.bookings}
   end
