@@ -10,13 +10,38 @@
       <a href="">My Bookings</a>
     </li>
     <li>
-      <a href="">My Kitchens</a>
+     <a href="">My Kitchens</a>
     </li>
   </ul>
   <div class="tabs-content">
     <div class="tabs-panel active" data-index="0">
       <!-- content here -->
       <div class= "container">
+
+          <p>Accessing the bookings people have made on my listings </p>
+        <% @my_kitchens_bookings.each do |booking| %>
+
+        <div class= "card flex m-4 p-3">
+            <%= image_tag "booking_image.jpg", class: "avatar" %>
+              <%= booking.kitchen.title %>
+              <i class="material-icons mr-2">Date :  <%= booking.date %></i>
+              <i class="material-icons mr-2">User_id <%= booking.user_id %></i>
+              <i class="material-icons mr-2">Name of booker: <%= booking.user.first_name %></i>
+
+                <div class="more_options">
+                  <%= link_to 'Change the date', new_kitchen_booking_path(@kitchens) %> |
+                  <%= link_to 'Delete',
+
+                    dashboard_path,
+                    method: :delete,
+                    data: { confirm: "Are you sure you want to delete?" } %>
+                </div>
+          </div>
+        <% end %>
+
+
+        <p>Accessing the bookings that I have made</p>
+
         <% @bookings.each do |booking| %>
           <div class= "card flex m-4 p-3">
             <% if booking.user_id == current_user.id %>
@@ -40,5 +65,20 @@
   </div>
     <div class="tabs-panel" data-index="1">
       <!-- content here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>

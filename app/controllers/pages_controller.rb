@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   def dashboards
     @bookings = Booking.all
     @kitchens = Kitchen.all
+    @my_kitchens_bookings = current_user.kitchens.flat_map{|kitchen|kitchen.bookings}
   end
+
 
 end
