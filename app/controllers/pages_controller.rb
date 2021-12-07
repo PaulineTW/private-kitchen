@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboards
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
     @kitchens = Kitchen.all
   end
 

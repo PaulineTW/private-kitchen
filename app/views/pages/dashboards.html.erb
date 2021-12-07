@@ -19,20 +19,18 @@
       <div class= "container">
         <% @bookings.each do |booking| %>
           <div class= "card flex m-4 p-3">
-            <% if booking.user_id == current_user.id %>
             <%= image_tag "booking_image.jpg", class: "avatar" %>
               <%= booking.kitchen.title %>
               <i class="material-icons mr-2">Date :  <%= booking.date %></i>
               <i class="material-icons mr-2"><%= booking.kitchen.price %> AUD</i>
 
                 <div class="more_options">
-                  <%= link_to 'Change the date', new_kitchen_booking_path(@kitchens) %> |
+                  <%= link_to 'Change the date', edit_booking_path(booking) %> |
                   <%= link_to 'Delete',
                     booking_path(booking),
                     method: :delete,
                     data: { confirm: "Are you sure you want to delete?" } %>
                 </div>
-            <% end %>
           </div>
         <% end %>
       </div>
