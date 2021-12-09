@@ -1,0 +1,16 @@
+<p>My kitchen</p>
+
+<div class= "card flex m-4 p-3">
+  <%= image_tag "booking_image.jpg", class: "avatar" %>
+  <%= @my_kitchen.title %>
+  <i class="material-icons mr-2">Kitchen description: <%= @my_kitchen.description %>
+  <i class="material-icons mr-2">Kitchen price: <%= @my_kitchen.price %> AUD</i>
+    <div class="more_options">
+      <%= link_to 'Edit Kitchen', edit_kitchen_path(@my_kitchen) %> |
+      <%= link_to 'Delete',
+        dashboard_path,
+        method: :delete,
+        data: { confirm: "Are you sure you want delete this kitchen?" } %>
+
+    </div>
+</div>
