@@ -26,6 +26,6 @@ class KitchensController < ApplicationController
   end
 
   def kitchen_params
-    params.require(:kitchen).permit(:title, :cuisine, :description, :price, photo: [])
+    params.require(:kitchen).permit(:title, :cuisine, :description, :price, :photo)
   end
 end
