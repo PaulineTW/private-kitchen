@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
-  before_action :find_booking, only: %i[edit update destroy approve]
+  before_action :find_booking, only: %i[edit update destroy approve decline]
 
   def index
     @bookings = Booking.all
@@ -12,13 +12,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @booking.user_id = current_user.id
+    @booking.kitchen_id = params[:kitchen_id]
     @booking.kitchen = @kitchen
+    @booking.status = "Pending"
+
     if @booking.save
-      flash[:success] = "Your place on our event has been booked, please await confirmation"
       redirect_to dashboard_path
     else
-      flash[:error] = "Booking unsuccessful"
       render :new
     end
   end
@@ -40,15 +41,15 @@ class BookingsController < ApplicationController
   end
 
   def approve
-    @booking.update(state: "confirm")
- if @booking.confirm
-   flash[:success] = "Booking successfully confirmed"
-   redirect_to dashboard_path
- else
-   flash[:error] = "Booking not approved"
-   redirect_to dashboard_path
- end
+    @booking.status = "Approved"
+    @booking.save
+    redirect_to dashboard_path
+  end
 
+  def decline
+    @booking.status = "declined"
+    @booking.save
+    redirect_to dashboard_path
   end
 
   private
