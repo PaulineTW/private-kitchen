@@ -95,6 +95,7 @@ Look at your main `application.scss` file to see how SCSS files are imported. Th
 @import "bootstrap/scss/bootstrap"; // from the node_modules
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'flatpickr/dist/flatpickr.css';
 
 // Your CSS partials
 @import "components/index";
