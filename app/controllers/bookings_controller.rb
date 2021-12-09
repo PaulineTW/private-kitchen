@@ -56,7 +56,7 @@ class BookingsController < ApplicationController
   end
 
   def find_kitchen
-    @kitchen = Kitchen.find(params[:kitchen_id])
+    @kitchen = Kitchen.find(params[:id])
   end
 
   def find_booking
