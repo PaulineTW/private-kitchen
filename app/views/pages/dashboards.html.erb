@@ -27,16 +27,16 @@
               <i class="material-icons mr-2">Name of booker: <%= booking.user.first_name %>
               <%= booking.user.last_name %></i>
               <i class="material-icons mr-2">Email of booker: <%= booking.user.email %></i>
-              <i class="material-icons mr-2">User_id <%= booking.user_id %></i>
               <i class="material-icons mr-2">Date : <%= booking.date %></i>
 
                 <div class="more_options">
-                  <%= link_to 'Change the date', new_kitchen_booking_path(@kitchens) %> |
-                  <%= link_to 'Delete',
 
-                    dashboard_path,
+                  <%= link_to 'Approve', new_kitchen_booking_path(@kitchens) %> |
+                  <%= link_to 'Reject',
+
+                    booking_path(booking),
                     method: :delete,
-                    data: { confirm: "Are you sure you want to delete?" } %>
+                    data: { confirm: "Are you sure you want to reject?" } %>
                 </div>
           </div>
         <% end %>

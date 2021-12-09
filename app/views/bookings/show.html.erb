@@ -1,1 +1,9 @@
-<h1>One booking detail</h1>
+
+<div class = "mx-auto" style="width: 500px;">
+  <h3>Your request for </h3>
+  <h1><b><%= @booking.kitchen.title %></b><h1>
+    <h3> has been received </h3>
+    <h4> Booking is <b><%= @booking.confirm %> </b>. </h4>
+    <% if @booking.confirm == false %>
+    <h4>You will know the outcome of your request in 24 hours</h4>
+    <% end  %>

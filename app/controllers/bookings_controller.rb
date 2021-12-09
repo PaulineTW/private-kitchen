@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.kitchen = @kitchen
     if @booking.save
-      flash[:success] = "Your place on our event has been booked"
+      flash[:success] = "Your place on our event has been booked, please await confirmation"
       redirect_to dashboard_path
     else
       flash[:error] = "Booking unsuccessful"
@@ -40,13 +40,13 @@ class BookingsController < ApplicationController
   end
 
   def approve
-    @booking.update(state: "approved")
- if @booking.state == "approved"
-   flash[:success] = "Booking successfully approved"
-   redirect_to bookings_path
+    @booking.update(state: "confirm")
+ if @booking.confirm
+   flash[:success] = "Booking successfully confirmed"
+   redirect_to dashboard_path
  else
    flash[:error] = "Booking not approved"
-   redirect_to bookings_path
+   redirect_to dashboard_path
  end
 
   end
