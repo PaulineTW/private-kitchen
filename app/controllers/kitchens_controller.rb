@@ -7,7 +7,6 @@ class KitchensController < ApplicationController
 
   def new
     @kitchen = Kitchen.new
-    @kitchen.booking = @booking
   end
 
   def show
@@ -27,6 +26,6 @@ class KitchensController < ApplicationController
   end
 
   def kitchen_params
-    params.require(:kitchen).permit(:title, :cuisine, :description, :price, photos: [])
+    params.require(:kitchen).permit(:title, :cuisine, :description, :price, photo: [])
   end
 end
