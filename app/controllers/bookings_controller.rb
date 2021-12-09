@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
-  before_action :find_booking, only: %i[edit update destroy]
+  before_action :find_booking, only: %i[edit update destroy approve]
 
   def index
     @bookings = Booking.all
@@ -35,6 +35,18 @@ class BookingsController < ApplicationController
   end
 
   def show
+  end
+
+  def approve
+ @booking.update(state: "approved")
+ if @booking.state == "approved"
+   flash[:success] = "Booking successfully approved"
+   redirect_to bookings_path
+ else
+   flash[:error] = "Booking not approved"
+   redirect_to bookings_path
+ end
+
   end
 
   private
