@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :kitchens do
       resources :bookings, only: %i[new create index]
     end
-      resources :bookings, only: %i[edit update destroy]
+      resources :bookings, only: %i[edit update destroy approve]
       resources :users
       get '/dashboards', to: 'pages#dashboards', as: :dashboard
 end
