@@ -1,25 +1,24 @@
 import "bootstrap";
 
-function tabs() {
-  const tabLinks = document.querySelectorAll(".tabs a");
-  const tabPanels = document.querySelectorAll(".tabs-panel");
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-  for (let el of tabLinks) {
-    el.addEventListener("click", e => {
-      e.preventDefault();
-
-      document.querySelector('.tabs li.active').classList.remove("active");
-      document.querySelector('.tabs-panel.active').classList.remove("active");
-
-      const parentListItem = el.parentElement;
-      parentList.classList.add("active");
-      const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
-
-      const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
-      panel[0].classList.add("active");
-    });
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 
-
-export default tabs;
+export default openCity(evt, cityName);

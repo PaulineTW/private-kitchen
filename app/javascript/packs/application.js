@@ -23,21 +23,26 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+// require("stylesheets/application.scss")
+
 import "bootstrap";
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 window.bootstrap = require('bootstrap');
-// require("stylesheets/application.scss")
+
+// Internal imports, e.g:
+// import { initSelect2 } from '../components/init_select2';
 import tabs from "./tabs";
 
 import { initFlatpickr } from "../plugins/init_flatpickr";
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import openCity from "./tabs";
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initFlatpickr();
   // initSelect2();
   tabs();
+  openCity();
 });
