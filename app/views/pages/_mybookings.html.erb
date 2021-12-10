@@ -1,1 +1,58 @@
 
+        <h4>As a host </h4>
+        <div class="container">
+        <div class= "notification m-4 p-3">
+          <div class="row">
+          <% @my_kitchens_bookings.each do |booking| %>
+
+            <div class= "notification-content">
+            <a href=""><%= image_tag "tomato.jpg", class: "avatar-large" %></a>
+                <p><strong><%= booking.kitchen.title %></strong>
+                <br><%= booking.user.first_name %> <%= booking.user.last_name %>
+                <br><%= booking.user.email %>
+                <br><%= booking.date %>
+                </p>
+
+                <div class="notification-actions">
+                   <a href=""> <%= link_to 'Approve', booking_approve_path(booking), :method => 'patch'%> <i class="far fa-thumbs-up"></i> </a>
+                    <a href=""><%= link_to 'Decline', booking_decline_path(booking), :method => 'patch'%>  <i class="far fa-trash-alt"></i></a>
+                </div>
+            </div>
+
+          <% end %>
+
+          </div>
+        </div>
+
+        </div>
+
+
+        <h4>As a guest</h4>
+      <div class="container">
+        <div class= "notification card m-4 p-3">
+          <% @bookings.each do |booking| %>
+
+                 <div class= "notification-content">
+                 <a href=""><%= image_tag "basil.jpg", class: "avatar-large" %></a>
+                    <p><strong><%= booking.kitchen.title %></strong>
+                    <br><%= booking.date %>
+                    <br><%= booking.kitchen.price %> AUD
+                    <br>Status of booking is <b><%= booking.status%> </b>.
+                    <% if booking.status == "Pending" %> <br> We will review and get back to you within 24 hours- thank you!
+                    <% elsif booking.status == "Approved" %> <br> Your booking has been confirmed. Can't wait to see you!
+                    <% else booking.status == "Declined" %> <br> Unfortunately we are unavailable. Please find another time.
+                    <% end  %>
+                    </p>
+
+                    <div class="notification-actions">
+                  <a href=""><%= link_to 'Edit my booking', edit_booking_path(booking)%><i class="fas fa-pencil-alt"></i> </a>
+                  <a href=""><%= link_to 'Cancel', booking_path(booking),
+                      method: :delete,
+                      data: { confirm: "Are you sure you want to cancel?" } %> <i class="far fa-trash-alt"></i> </a>
+                </div>
+                </div>
+
+                  <% end %>
+
+              </div>
+             </div>

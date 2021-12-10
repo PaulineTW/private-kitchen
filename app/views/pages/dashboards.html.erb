@@ -14,50 +14,10 @@
     <label for="tab2">My Kitchens</label>
 
     <div class="tab__content">
-      <p>My Bookings</p>
+       <%= render "mybookings" %>
     </div>
     <div class="tab__content">
       <%= render "mykitchens" %>
   </div>
  </div>
 </div>
-
-<h3>My bookings as a host </h3>
-<div class= "notification m-4 p-3">
-  <% @my_kitchens_bookings.each do |booking| %>
-    <a href=""><%= image_tag "tomato.jpg", class: "avatar-large" %></a>
-    <div class= "notification-content">
-        <p><strong><%= booking.kitchen.title %></strong></p>
-        <p> <%= booking.user.first_name %> <%= booking.user.last_name %></p>
-        <p> <%= booking.user.email %></p>
-    </div>
-    <div class="notification-actions">
-      <%= link_to 'Approve', booking_approve_path(booking), :method => 'patch'%> <i class="far fa-thumbs-up"></i>  |
-      <%= link_to 'Decline', booking_decline_path(booking), :method => 'patch'%>  <i class="far fa-trash-alt"></i>
-    </div>
-  <% end %>
-</div>
-
-
-<h3>My bookings as a guest</h3>
-<div class= "notification m-4 p-3">
-  <% @bookings.each do |booking| %>
-    <a href=""><%= image_tag "basil.jpg", class: "avatar-large" %></a>
-    <div class= "notification-content">
-        <p><strong><%= booking.kitchen.title %></strong></p>
-        <p> <%= booking.date %> </p>
-        <p> <%= booking.kitchen.price %> AUD </p>
-        <p> Status of booking is <b><%= booking.status%> </b>. </p>
-        <% if booking.status == "Pending" %> We will review within 24 hours- thank you!
-        <% elsif booking.status == "Approved" %> Your booking has been confirmed. Can't wait to see you!
-        <% end  %>
-    </div>
-    <div class="notification-actions">
-      <a href=""><%= link_to 'Edit my booking', edit_booking_path(booking)%><i class="fas fa-pencil-alt"></i> </a>  |
-      <a href=""><%= link_to 'Cancel', booking_path(booking),
-          method: :delete,
-          data: { confirm: "Are you sure you want to cancel?" } %> <i class="far fa-trash-alt"></i> </a>
-    </div>
-  <% end %>
-</div>
-
