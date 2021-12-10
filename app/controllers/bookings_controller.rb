@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
-  before_action :find_booking, only: %i[create new show edit update destroy approve decline]
+  before_action :find_booking, only: %i[show edit update destroy approve decline]
 
 
   def index
