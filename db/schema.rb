@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_12_09_121838) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "NA"
+    t.integer "guests"
+    t.string "timeslot"
     t.index ["kitchen_id"], name: "index_bookings_on_kitchen_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
   before_action :find_booking, only: %i[edit update destroy approve decline]
 
+
   def index
     @bookings = Booking.all
   end
@@ -50,12 +51,13 @@ class BookingsController < ApplicationController
     @booking.status = "declined"
     @booking.save
     redirect_to dashboard_path
+
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :guests)
   end
 
   def find_kitchen

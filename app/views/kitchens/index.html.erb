@@ -1,22 +1,18 @@
-<%# <h1>Hello this is the index page</h1> %>
-<div class= "container py5">
-  <div class="d-flex align-items-center justify-content-center mb-3">
-
-    <div class="row">
-      <% @kitchens.each do |kitchen| %>
-        <div class="col">
-          <div class="card m-3" style="width: 18rem;">
-            <%= image_tag "indian_food.jpg" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= kitchen.title%></h5>
-              <p class="card-text"><%= kitchen.cuisine%></p>
-              <div class="button">
-                <%= link_to 'View Kitchen', kitchen_path(kitchen), :class => "btn btn-outline-secondary text-decoration-none " %>
-              </div>
+<div class="container">
+  <div class ="title">
+    <h1>All Kitchen experiences<%= "(#{@kitchens.length})"%></h1>
+  </div>
+  <div class="cards">
+    <% @kitchens.each do |kitchen| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= kitchen.photo.attached? ? cl_image_path(kitchen.photo.key) : asset_path('japan_food.jpg') %>)">
+        <div class="card-body">
+          <h3 class="card-title"><%= kitchen.title%></h5>
+          <p class="card-text"><%= kitchen.cuisine%></p>
+            <div class="button">
+              <%= link_to 'View Kitchen', kitchen_path(kitchen), :class => "btn btn-light text-decoration-none " %>
             </div>
-          </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
