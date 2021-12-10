@@ -5,9 +5,8 @@ class PagesController < ApplicationController
 
   def dashboards
     @bookings = Booking.where(user: current_user)
-    @kitchens = Kitchen.all
     @my_kitchens_bookings = current_user.kitchens.flat_map{|kitchen|kitchen.bookings}
-    @my_kitchen = Kitchen.find_by(user: current_user)
+    @my_kitchens = Kitchen.where(user: current_user)
   end
 
 
