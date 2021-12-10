@@ -17,28 +17,26 @@
       <p>My Bookings</p>
     </div>
     <div class="tab__content">
-      <p>My Kitchens</p>
       <%= render "mykitchens" %>
   </div>
  </div>
 </div>
 
-        <h3>My bookings as a host </h3>
-        <div class= "notification m-4 p-3">
-          <% @my_kitchens_bookings.each do |booking| %>
-            <a href=""><%= image_tag "tomato.jpg", class: "avatar-large" %></a>
-            <div class= "notification-content">
-                <p><strong><%= booking.kitchen.title %></strong></p>
-                <p> <%= booking.user.first_name %> <%= booking.user.last_name %></p>
-                <p> <%= booking.user.email %></p>
-                <p> <%= booking.date %> </p>
-            </div>
-              <div class="notification-actions">
-                <%= link_to 'Approve', booking_approve_path(booking), :method => 'patch'%> <i class="far fa-thumbs-up"></i>  |
-                <%= link_to 'Decline', booking_decline_path(booking), :method => 'patch'%>  <i class="far fa-trash-alt"></i>
-              </div>
-          <% end %>
-        </div>
+<h3>My bookings as a host </h3>
+<div class= "notification m-4 p-3">
+  <% @my_kitchens_bookings.each do |booking| %>
+    <a href=""><%= image_tag "tomato.jpg", class: "avatar-large" %></a>
+    <div class= "notification-content">
+        <p><strong><%= booking.kitchen.title %></strong></p>
+        <p> <%= booking.user.first_name %> <%= booking.user.last_name %></p>
+        <p> <%= booking.user.email %></p>
+    </div>
+      <div class="notification-actions">
+        <%= link_to 'Approve', booking_approve_path(booking), :method => 'patch'%> <i class="far fa-thumbs-up"></i>  |
+        <%= link_to 'Decline', booking_decline_path(booking), :method => 'patch'%>  <i class="far fa-trash-alt"></i>
+      </div>
+  <% end %>
+</div>
 
 
         <h3>My bookings as a guest</h3>
@@ -51,7 +49,7 @@
                 <p> <%= booking.date %> </p>
                 <p> <%= booking.kitchen.price %> AUD </p>
                 <p> Status of booking is <b><%= booking.status%> </b>. </p>
-                <% if booking.status == "Pending" %> Comment: We will review within 24 hours- thank you!
+                <% if booking.status == "Pending" %> We will review within 24 hours- thank you!
                 <% elsif booking.status == "Approved" %> Your booking has been confirmed. Can't wait to see you!
                 <% end  %>
             </div>

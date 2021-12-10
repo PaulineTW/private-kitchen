@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
   before_action :find_booking, only: %i[ edit update destroy approve decline]
 
-
   def index
     @bookings = Booking.all
   end

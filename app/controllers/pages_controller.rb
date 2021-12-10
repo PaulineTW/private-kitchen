@@ -8,6 +8,4 @@ class PagesController < ApplicationController
     @my_kitchens_bookings = current_user.kitchens.flat_map{|kitchen|kitchen.bookings}
     @my_kitchens = Kitchen.where(user: current_user)
   end
-
-
 end
