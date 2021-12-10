@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   before_action :find_kitchen, only: %i[create new]
-  before_action :find_booking, only: %i[edit update destroy approve decline]
-
+  before_action :find_booking, only: %i[ edit update destroy approve decline]
 
   def index
     @bookings = Booking.all
@@ -57,11 +56,11 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :guests)
+    params.require(:booking).permit(:date)
   end
 
   def find_kitchen
-    @kitchen = Kitchen.find(params[:id])
+    @kitchen = Kitchen.find(params[:kitchen_id])
   end
 
   def find_booking
