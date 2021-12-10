@@ -4,6 +4,27 @@
   </div>
 </div>
 
+<!-- 2nd try -->
+
+<div class="container">
+  <div class="tab-wrap">
+    <!-- active tab on page load gets checked attribute -->
+    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+    <label for="tab1">My Bookings</label>
+
+    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+    <label for="tab2">My Kitchens</label>
+
+    <div class="tab__content">
+      <p>My Bookings</p>
+    </div>
+    <div class="tab__content">
+      <p>My Kitchens</p>
+      <%= render "mykitchens" %>
+  </div>
+ </div>
+</div>
+    
         <h3>My bookings as a host </h3>
         <div class= "notification m-4 p-3">
           <% @my_kitchens_bookings.each do |booking| %>
@@ -44,7 +65,6 @@
               </div>
           <% end %>
         </div>
-
+  </div>
   </div>
 
-  </div>

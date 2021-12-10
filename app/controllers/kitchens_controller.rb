@@ -1,5 +1,6 @@
 class KitchensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :find_kitchen, only: %i[show edit update destroy]
 
   def index
     @kitchens = Kitchen.all
@@ -25,7 +26,27 @@ class KitchensController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @kitchen.update(kitchen_params)
+    redirect_to dashboard_path
+  end
+
+  def destroy
+    @kitchen.destroy
+    redirect_to dashboard_path
+  end
+
+  private
+
   def kitchen_params
     params.require(:kitchen).permit(:title, :cuisine, :description, :price, :photo)
   end
+
+  def find_kitchen
+    @kitchen = Kitchen.find(params[:id])
+  end
+
 end
