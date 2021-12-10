@@ -50,7 +50,7 @@ class BookingsController < ApplicationController
   end
 
   def decline
-    @booking.status = "declined"
+    @booking.status = "Declined"
     @booking.save
     redirect_to dashboard_path
 
