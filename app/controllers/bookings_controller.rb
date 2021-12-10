@@ -59,7 +59,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:kitchen_id, :date, :guests, :timeslot)
+    params.require(:booking).permit(:date)
   end
 
   def find_kitchen
