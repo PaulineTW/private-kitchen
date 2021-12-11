@@ -1,7 +1,21 @@
-<div class="container">
+<div class="container p-4">
   <div class ="title">
     <h1>All Kitchen experiences<%= "(#{@kitchens.length})"%></h1>
   </div>
+
+  <div class="container">
+    <%= form_tag kitchens_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control rounded",
+        placeholder: "Search by cuisine"
+      %>
+      <%= submit_tag "Search", class: "btn btn-light" %>
+    <% end %>
+  </div>
+</div>
+
+
   <div class="cards">
     <% @kitchens.each do |kitchen| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= kitchen.photo.attached? ? cl_image_path(kitchen.photo.key) : asset_path('japan_food.jpg') %>)">

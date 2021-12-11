@@ -3,7 +3,11 @@ class KitchensController < ApplicationController
   before_action :find_kitchen, only: %i[show edit update destroy]
 
   def index
-    @kitchens = Kitchen.all
+    if params[:query].present?
+      @kitchens = Kitchen.where("cuisine ILIKE ?", "%#{params[:query]}%")
+    else
+      @kitchens = Kitchen.all
+    end
   end
 
   def new

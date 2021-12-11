@@ -22,3 +22,31 @@
 a.btn.btn-light {
   font-size: 22px;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+.background {
+  height: 1000px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  opacity: 0.80;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .logo_home {
+    width: 400px;
+  }
+
+  h2, p {
+    padding: 10px;
+    color: white;
+  }
+
+}
+
+a.btn.btn-light {
+  font-size: 22px;
+}
+}
