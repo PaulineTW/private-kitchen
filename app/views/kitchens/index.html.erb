@@ -4,7 +4,7 @@
   </div>
   <div class="cards">
     <% @kitchens.each do |kitchen| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= kitchen.photo.attached? ? cl_image_path(kitchen.photo.key) : asset_path('japan_food.jpg') %>)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= kitchen.photo.attached? ? cl_image_path(kitchen.photo.key) : asset_path('indexphoto.png') %>)">
         <div class="card-body">
           <h3 class="card-title"><%= kitchen.title%></h5>
           <p class="card-text"><%= kitchen.cuisine%></p>
