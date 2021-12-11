@@ -36,6 +36,7 @@
                  <a href=""><%= image_tag "basil.jpg", class: "avatar-large" %></a>
                     <p><strong><%= booking.kitchen.title %></strong>
                     <br><%= booking.date %>
+                    <br><%= booking.timeslot%>
                     <br><%= booking.kitchen.price %> AUD
                     <br>Status of booking is <b><%= booking.status%> </b>.
                     <% if booking.status == "Pending" %> <br> We will review and get back to you within 24 hours- thank you!
