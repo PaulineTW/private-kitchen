@@ -6,7 +6,7 @@
         <%= simple_form_for [@kitchen, @booking] do |f| %>
           <%= f.input :date, placeholder: 'Select a date', as: :string, type: :text %>
           <%= f.input :timeslot, collection: ['16:00 - 18:00', '17:00 - 19:00', '18:00 - 20:00'], selected: '16:00 - 18:00', label: 'Select a timeslot' %>
-          <%= f.input :id, collection: 1..6, selected: 1, label: 'Choose how many guests' %>
+          <%= f.input :guests, collection: 1..6, selected: 1, label: 'Choose how many guests' %>
           <%= f.submit class: 'btn btn-outline-success text-decoration-none' %>
         <% end %>
       </div>
