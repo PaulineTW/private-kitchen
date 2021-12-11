@@ -1,4 +1,15 @@
 <div class="container">
+<%= form_tag kitchens_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search by cuisine"
+  %>
+  <%= submit_tag "Search", class: "btn btn-light" %>
+<% end %>
+</div>
+
+<div class="container">
   <div class ="title">
     <h1>All Kitchen experiences<%= "(#{@kitchens.length})"%></h1>
   </div>
