@@ -10,6 +10,19 @@
 - Front end: HTML5, CSS3, JavaScript (ES6), Bootstrap
 - Hosting: Heroku
 
+## Features
+
+- Browse kitchen experience
+- serach by cuisine type
+- See more kitchen experience details
+- Book a kitchen experience
+- Dashboard for users to see all their bookings and experiences they own
+- Cancel a booking
+- Add a kitchen experience
+- Update booking details
+- Delete kitchen experience
+- Delete booking
+
 ## Team Members
 
 - [Julianne Tran](https://github.com/juliannetran)
